@@ -3,3 +3,162 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	background-color: black;
+	color: white;
+}
+
+header {
+	padding: 50px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header > div > h1 {
+	display: inline-block;
+}
+header > div > span {
+	font-size: 30px;
+	font-family: system-ui;
+}
+
+nav {
+	width: 160px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 30px;
+	font-family: system-ui;
+}
+nav > button {
+	border: 1px solid transparent;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	font-weight: 800;
+	background-color: blue;
+}
+section {
+	margin-left: 70px;
+	width: 90%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 30px;
+	font-family: system-ui;
+	gap: 26px;
+}
+
+.blur {
+	filter: blur(10px);
+}
+.addNewList,
+.addNewItem {
+	display: none;
+	background-color: white;
+	width: 350px;
+	height: 200px;
+	margin: auto;
+	position: fixed;
+	top: 200px;
+	left: 33%;
+	color: chocolate;
+	border: 1px solid chocolate;
+	border-radius: 10px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-size: xx-large;
+}
+.addNewList > div > input,
+.addNewItem > div > input {
+	width: 250px;
+	height: 40px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid gray;
+}
+.addButton,
+.addItemButton,
+.closeButton {
+	display: inline-block;
+	background-color: chocolate;
+	color: white;
+	border: 1px solid chocolate;
+	border-radius: 20px;
+	width: 80px;
+	height: 30px;
+	font-size: x-large;
+	text-align: center;
+}
+.box {
+	width: 250px;
+	height: 360px;
+	background-color: whitesmoke;
+	color: black;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	position: relative;
+	text-align: center;
+}
+/* .boxHead {
+	 height: 50px; 
+} */
+.boxDeleteButton {
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	/* float: right; */
+	position: absolute;
+	bottom: 10px;
+	right: 50px;
+}
+.boxAddButton {
+	background-color: blue;
+	color: white;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	/* float: right; */
+	font-size: 25px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+}
+.fixedPos {
+	font-size: 29px;
+	font-family: system-ui;
+	top: 200px;
+	left: 40%;
+}
+.noneNav {
+	display: none;
+	padding: 50px 100px;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+}
+.noneNavH {
+	display: inline-block;
+	font-size: 30px;
+	font-family: system-ui;
+}
+nav > div > span {
+	border: 1px solid transparent;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	font-weight: 800;
+	background-color: white;
+	color: black;
+	display: inline-block;
+}
