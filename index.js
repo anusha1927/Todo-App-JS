@@ -1,8 +1,12 @@
 let son;
-document.querySelector('#addItem').addEventListener('click', () => {
+var newAddNewListHead = '';
+
+// document.querySelector('#addItem').addEventListener('click', () => {
+function start() {
 	document.querySelector('div').classList.add('blur');
 	document.querySelector('.addNewList').style.display = 'flex';
-});
+}
+//});
 
 document.querySelector('.closeButton').addEventListener('click', () => {
 	document.querySelector('div').classList.remove('blur');
@@ -10,14 +14,36 @@ document.querySelector('.closeButton').addEventListener('click', () => {
 	document.querySelector('.addNewItem').style.display = 'none';
 });
 
-document.querySelector('.addButton').addEventListener('click', () => {
+// document.querySelector('.addButton').addEventListener('click', () => {
+// 	let addNewListHead = document.querySelector('#addNewListText').value;
+// 	document.querySelector('#none').style.display = 'none';
+// 	document.querySelector('div').classList.remove('blur');
+// 	document.querySelector('.addNewList').style.display = 'none';
+// 	document.querySelector('.addNewItem').style.display = 'none';
+// 	createCards(addNewListHead);
+// });
+
+function startHead(section, card) {
+	document.querySelector('#addItem').addEventListener('click', () => {
+		document.querySelector('div').classList.add('blur');
+		document.querySelector('.addNewList').style.display = 'flex';
+
+		document.querySelector('header').style.display = 'flex';
+		section.style.display = 'flex';
+		document.querySelector('.noneNav').style.display = 'none';
+		document.querySelector('section').appendChild(card);
+		card.classList.remove('fixedPos');
+	});
+}
+
+function addingTasks() {
 	let addNewListHead = document.querySelector('#addNewListText').value;
 	document.querySelector('#none').style.display = 'none';
 	document.querySelector('div').classList.remove('blur');
 	document.querySelector('.addNewList').style.display = 'none';
 	document.querySelector('.addNewItem').style.display = 'none';
 	createCards(addNewListHead);
-});
+}
 
 function addingButton(son) {
 	document.querySelector('.addItemButton').addEventListener('click', () => {
@@ -73,8 +99,14 @@ function createCardItems(addNewListHead, box) {
     delete
     </span>`;
 	boxAddButton.innerHTML = `+`;
-
 	boxHead.innerHTML = `${addNewListHead}`;
+
+	// if (addNewListHead.length > 13) {
+	// 	newAddNewListHead = addNewListHead.substring(0, 12);
+	// 	boxHead.innerHTML = `${newAddNewListHead}`;
+	// } else {
+	// 	boxHead.innerHTML = `${addNewListHead}`;
+	// }
 
 	boxAddButton.addEventListener('click', (event) => {
 		document.querySelector('div').classList.add('blur');
@@ -87,9 +119,8 @@ function createCardItems(addNewListHead, box) {
 }
 function clickBoxHead(addNewListHead, section) {
 	var boxHead = document.querySelectorAll('.boxHead');
-	console.log(boxHead);
+
 	boxHead.forEach((button) => {
-		console.log(button);
 		button.addEventListener('click', () => {
 			var card = button.parentNode;
 			document.querySelector('header').style.display = 'none';
@@ -97,7 +128,21 @@ function clickBoxHead(addNewListHead, section) {
 			document.querySelector('div').appendChild(card);
 			card.classList.add('fixedPos');
 			document.querySelector('.noneNav').style.display = 'flex';
+			document.querySelector('.text').innerHTML = `<h3>${addNewListHead}</h3>`;
+
+			back(section, card);
+
+			startHead(section, card);
 		});
+	});
+}
+function back(section, card) {
+	document.querySelector('.noneNavH').addEventListener('click', () => {
+		document.querySelector('header').style.display = 'flex';
+		section.style.display = 'flex';
+		document.querySelector('.noneNav').style.display = 'none';
+		document.querySelector('section').appendChild(card);
+		card.classList.remove('fixedPos');
 	});
 }
 

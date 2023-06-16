@@ -102,9 +102,11 @@ section {
 	position: relative;
 	text-align: center;
 }
-/* .boxHead {
-	 height: 50px; 
-} */
+.boxHead {
+	height: 50px;
+	text-align: left;
+	color: brown;
+}
 .boxDeleteButton {
 	background-color: red;
 	color: white;
@@ -136,13 +138,12 @@ section {
 .fixedPos {
 	font-size: 29px;
 	font-family: system-ui;
-	top: 200px;
 	left: 40%;
 }
 .noneNav {
 	display: none;
 	padding: 50px 100px;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width: 100vw;
 }
@@ -151,14 +152,20 @@ section {
 	font-size: 30px;
 	font-family: system-ui;
 }
-nav > div > span {
+/* nav > div > span {
 	border: 1px solid transparent;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
-	font-size: 20px;
-	font-weight: 800;
+	font-size: 18px;
+	font-weight: 1000;
 	background-color: white;
 	color: black;
 	display: inline-block;
+	text-align: center;
+} */
+.text {
+	text-align: center;
+	font-weight: bold;
+	color: crimson;
 }

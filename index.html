@@ -17,14 +17,14 @@
 					<h1>Tasks</h1>
 					<span> List</span>
 				</div>
-				<nav><button id="addItem">+</button><span>Add Item</span></nav>
+				<nav><button onclick="start()">+</button><span>Add Item</span></nav>
 			</header>
 			<nav class="noneNav">
 				<div>
-					<span><</span>
 					<h1 class="noneNavH">Back</h1>
 				</div>
-				<nav><button>+</button></nav>
+				<div class="text"></div>
+				<nav><button id="addItem">+</button></nav>
 			</nav>
 			<section>
 				<div id="none">No Items in the todo list</div>
@@ -43,7 +43,7 @@
 				/>
 			</div>
 			<div>
-				<div class="addButton">Add</div>
+				<div class="addButton" onclick="addingTasks()">Add</div>
 				<div class="closeButton">Close</div>
 			</div>
 		</div>
