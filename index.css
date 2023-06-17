@@ -81,7 +81,8 @@ section {
 }
 .addButton,
 .addItemButton,
-.closeButton {
+.closeButton,
+.closeButton2 {
 	display: inline-block;
 	background-color: chocolate;
 	color: white;
@@ -168,4 +169,25 @@ section {
 	text-align: center;
 	font-weight: bold;
 	color: crimson;
+}
+.row {
+	font-size: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.rowButton {
+	border-radius: 10px;
+	background-color: cadetblue;
+	color: black;
+	text-align: center;
+	font-family: system-ui;
+	width: 60px;
+}
+.strikeThrough {
+	text-decoration: line-through;
+	text-align: center;
+	color: red;
 }
