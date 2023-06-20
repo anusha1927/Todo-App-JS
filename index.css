@@ -194,7 +194,7 @@ section {
 }
 
 /* ################################################# */
-@media screen and (min-width: 360px) and (max-width: 600px) {
+@media screen and (min-width: 360px) and (max-width: 400px) {
 	header {
 		flex-direction: column;
 		gap: 20px;
@@ -205,10 +205,74 @@ section {
 		width: 100%;
 		align-content: center;
 	}
+	.addNewList,
+	.addNewItem {
+		left: 10%;
+		top: 150px;
+		width: 80%;
+	}
+}
+@media screen and (min-width: 400px) and (max-width: 440px) {
+	header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	section {
+		flex-direction: column;
+		margin: 0px;
+		width: 100%;
+		align-content: center;
+	}
+	.addNewList,
+	.addNewItem {
+		left: 34px;
+		top: 150px;
+	}
+}
+@media screen and (min-width: 440px) and (max-width: 530px) {
+	header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	section {
+		flex-direction: column;
+		margin: 0px;
+		width: 100%;
+		align-content: center;
+	}
+	.addNewList,
+	.addNewItem {
+		left: 20%;
+		top: 150px;
+	}
+}
+
+@media screen and (min-width: 530px) and (max-width: 600px) {
+	header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	section {
+		flex-direction: column;
+		margin: 0px;
+		width: 100%;
+		align-content: center;
+	}
+	.addNewList,
+	.addNewItem {
+		left: 0;
+		margin-left: 115px;
+		top: 150px;
+	}
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
 	section {
 		margin: 0px;
 		width: 100%;
+	}
+	.addNewList,
+	.addNewItem {
+		left: 25%;
+		top: 150px;
 	}
 }
