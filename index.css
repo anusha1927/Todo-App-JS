@@ -105,7 +105,7 @@ section {
 }
 .boxHead {
 	height: 50px;
-	text-align: left;
+	/* text-align: left; */
 	color: brown;
 }
 .boxDeleteButton {
@@ -171,9 +171,10 @@ section {
 	color: crimson;
 }
 .row {
+	height: 30px;
 	font-size: 15px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
@@ -190,4 +191,24 @@ section {
 	text-decoration: line-through;
 	text-align: center;
 	color: red;
+}
+
+/* ################################################# */
+@media screen and (min-width: 360px) and (max-width: 600px) {
+	header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	section {
+		flex-direction: column;
+		margin: 0px;
+		width: 100%;
+		align-content: center;
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	section {
+		margin: 0px;
+		width: 100%;
+	}
 }
