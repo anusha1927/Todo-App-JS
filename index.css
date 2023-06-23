@@ -211,6 +211,11 @@ section {
 		top: 150px;
 		width: 80%;
 	}
+	.fixedPos {
+    font-size: 29px;
+    font-family: system-ui;
+    left: 18%;
+}
 }
 @media screen and (min-width: 400px) and (max-width: 440px) {
 	header {
@@ -228,6 +233,11 @@ section {
 		left: 34px;
 		top: 150px;
 	}
+	.fixedPos {
+    font-size: 29px;
+    font-family: system-ui;
+    left: 18%;
+}
 }
 @media screen and (min-width: 440px) and (max-width: 530px) {
 	header {
@@ -245,6 +255,11 @@ section {
 		left: 20%;
 		top: 150px;
 	}
+	.fixedPos {
+    font-size: 29px;
+    font-family: system-ui;
+    left: 18%;
+}
 }
 
 @media screen and (min-width: 530px) and (max-width: 600px) {
