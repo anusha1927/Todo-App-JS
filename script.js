@@ -44,32 +44,49 @@ function addingTasks() {
 	box.appendChild(boxHead);
 	boxHead.classList.add('boxHead');
 	boxHead.innerHTML = `${addNewListHead.value}`;
+	
 	boxHead.addEventListener('click', () => {
+		var allTasks = document.querySelectorAll('.box');
 		var card = boxHead.parentNode;
 		var cardValue = boxHead.innerHTML;
+		
+		//console.log(allTasks)
 		header.style.display = 'none';
-		section.style.display = 'none';
-		blurDiv.appendChild(card);
-		card.classList.add('fixedPos');
+		card.style.display = 'block';
+		//section.style.display = 'none';
+		//blurDiv.appendChild(card);
+		//card.classList.add('fixedPos');
+		allTasks.forEach((cards)=>{
+			if(cards!==card)
+			cards.style.display = 'none';			
+			//console.log(cards===card)
+		});
+		
 		document.querySelector('.noneNav').style.display = 'flex';
 		document.querySelector('.text').innerHTML = `<h3>${cardValue}</h3>`;
 
 		document.querySelector('.noneNavH').addEventListener('click', () => {
 			header.style.display = 'flex';
-			section.style.display = 'flex';
+			//section.style.display = 'flex';
 			document.querySelector('.noneNav').style.display = 'none';
-			section.appendChild(card);
-			card.classList.remove('fixedPos');
+			allTasks.forEach((cards)=>{			
+			cards.style.display = 'block';	
+		});
+			//section.appendChild(card);
+			//card.classList.remove('fixedPos');
 		});
 
 		document.querySelector('#addItem').addEventListener('click', () => {
 			blurDiv.classList.add('blur');
 			addNewList.style.display = 'flex';
 			header.style.display = 'flex';
-			section.style.display = 'flex';
+			//section.style.display = 'flex';
 			document.querySelector('.noneNav').style.display = 'none';
-			section.appendChild(card);
-			card.classList.remove('fixedPos');
+			allTasks.forEach((cards)=>{			
+			cards.style.display = 'block';	
+		});
+			//section.appendChild(card);
+			//card.classList.remove('fixedPos');
 		});
 	});
 
@@ -83,6 +100,7 @@ function addingTasks() {
 	boxDeleteButton.addEventListener('click', () => {
 		var cardDelete = boxDeleteButton.parentNode;
 		cardDelete.remove();
+		if(document.querySelectorAll('.box').length<1) document.querySelector('#none').style.display = 'block';
 	});
 
 	box.appendChild(boxAddButton);
