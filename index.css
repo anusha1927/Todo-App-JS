@@ -49,7 +49,9 @@ section {
 	font-family: system-ui;
 	gap: 26px;
 }
-
+.sectionAround{
+	justify-content: space-around;
+}
 .blur {
 	filter: blur(10px);
 }

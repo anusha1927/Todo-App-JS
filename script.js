@@ -53,6 +53,7 @@ function addingTasks() {
 		//console.log(allTasks)
 		header.style.display = 'none';
 		card.style.display = 'block';
+		section.classList.add('sectionAround');
 		//section.style.display = 'none';
 		//blurDiv.appendChild(card);
 		//card.classList.add('fixedPos');
@@ -67,6 +68,7 @@ function addingTasks() {
 
 		document.querySelector('.noneNavH').addEventListener('click', () => {
 			header.style.display = 'flex';
+			section.classList.remove('sectionAround');
 			//section.style.display = 'flex';
 			document.querySelector('.noneNav').style.display = 'none';
 			allTasks.forEach((cards)=>{			
