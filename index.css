@@ -43,7 +43,7 @@ section {
 	margin-left: 70px;
 	width: 90%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	font-size: 30px;
 	font-family: system-ui;
