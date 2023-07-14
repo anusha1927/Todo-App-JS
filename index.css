@@ -149,7 +149,7 @@ section {
 	padding: 50px 100px;
 	justify-content: space-between;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 }
 .noneNavH {
 	display: inline-block;
