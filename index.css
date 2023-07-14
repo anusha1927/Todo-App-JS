@@ -51,6 +51,7 @@ section {
 }
 .sectionAround{
 	justify-content: space-around;
+	margin-left:0px;
 }
 .blur {
 	filter: blur(10px);
@@ -146,7 +147,7 @@ section {
 .noneNav {
 	display: none;
 	padding: 50px 100px;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
 }
